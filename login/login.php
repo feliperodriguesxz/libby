@@ -14,7 +14,7 @@ include('config.php');
 include('verifica_login.php');
 
 if ( $_SESSION['logado'] === true ) {
-    header("Location:http://localhost/libby/signup/infos.html");
+   header("Location:http://localhost/libby/signup/infos.html");
 }
 ?>
 
