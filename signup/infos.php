@@ -48,6 +48,7 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 			VALUES (?, ?, ?, ?, ?)');
 			$pdo_insere->execute(  array("$contaEmail", "$contaSenha", "$contaNome", "$contaCPF", 0));
 			include('../login/login.php');
+
 		//include('../login/verifica_login.php');
 			
  echo "<script type='text/javascript'>alert('Usuário cadastrado');</script>";
