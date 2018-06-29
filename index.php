@@ -12,17 +12,17 @@
 
 $choice = @$_POST['options'];
 
-if($choice == 'basico'){
+if($choice == 'R$9,90'){
 	$choice = 1;
 	$_SESSION['contaPlano'] = 1;
 
 	header("Location:http://localhost/libby/signup/pagamento.html");
-}else if($choice == 'padrao'){
+}else if($choice == 'R$19,90'){
 	$choice = 2;
 	$_SESSION['contaPlano'] = 2;
 	
 	header("Location:http://localhost/libby/signup/pagamento.html");
-}else if($choice == 'premium'){
+}else if($choice == 'R$27,90'){
 	$choice = 3;
 	
 	$_SESSION['contaPlano'] = 3;
