@@ -46,6 +46,19 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 		$pdo_insere = $conexao_pdo->prepare('INSERT INTO CARTAO (cardNum, cardVal, cardNomeImpresso, cardCVV, contaCod) 
 		VALUES (?, ?, ?, ?, ?)');
 		$pdo_insere->execute(  array("$cardNum", "$cardVal", "$cardNomeImpresso", "$cardCVV", $_SESSION['contaCod']  ));
+
+		//update pra relacionar o usuario com o livro que esta lendo
+        $pdo_update = $conexao_pdo->prepare('UPDATE LENDO SET quantVezes = quantVezes+1 WHERE contaCod = ? AND livCod = ?');
+		$pdo_update->execute(  array($_SESSION['contaCod'], 1));
+		// $pdo_update->execute(  array($_SESSION['contaCod'], $_SESSION['livCod']));
+		
+		$count = $pdo_update->rowCount();
+
+		if($count > 0){
+			//usuario já leu um ou mais livros, mandar para pagina com recomendacoes		
+		}else{
+			//usuario novo, mostrar pagina sem recomendacoes, etc
+		}		
 			
 	}
 }
