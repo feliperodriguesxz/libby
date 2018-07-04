@@ -7,30 +7,37 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link href="css/half-slider.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<title>Libby - Inicio</title>
 
-</head>
-
 <body>
-	<nav class="navbar navbar-expand-lg" style="background-color: #A9F5D0;">
-		<a href="http://localhost/libby/index.html">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			<img src="logo.png" / width="150" height="80">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
 			    aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Início
+						<a class="nav-link" href="acervo.html">Início
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Configurações</a>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						    aria-expanded="false">
+							Meu Perfil
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="config.html">Configurações</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Sair</a>
+						</div>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -52,271 +59,458 @@
 						</div>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link" href="#">Sair</a>
-					</li>
 				</ul>
 
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search" placeholder="Procure um livro ou autor" aria-label="Search">
 					<button class="btn btn-info my-2 my-sm-0" type="submit">Pesquisar</button>
 				</form>
+				</ul>
 			</div>
-	</nav>
+		</nav>
+	</div>
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<!-- Slide One - Set the background image for this slide in the line below -->
+			<div class="carousel-item active" style="background-image: url('https://www.space.ca/wp-content/uploads/2017/03/donnie-2.png')">
+				<div class="carousel-caption d-none d-md-block">
+					<h3>Donnie Darko</h3>
+					<p>Donnie Darko - Livro</p>
+				</div>
+			</div>
+			<!-- Slide Two - Set the background image for this slide in the line below -->
+			<div class="carousel-item" style="background-image: url('https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/2/2c/NormanBatesTitleCard.png/revision/latest?cb=20150313231451')">
+				<div class="carousel-caption d-none d-md-block">
+					<h3>Norman Bates</h3>
+					<p>Psicose</p>
+				</div>
+			</div>
+			<!-- Slide Three - Set the background image for this slide in the line below -->
+			<div class="carousel-item" style="background-image: url('https://i.kinja-img.com/gawker-media/image/upload/s--XUH3uV68--/c_scale,f_auto,fl_progressive,q_80,w_800/1482712341109124933.jpg')">
+				<div class="carousel-caption d-none d-md-block">
+					<h3>Hannibal Lecter</h3>
+					<p>Dragão Vermelho</p>
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
+		<li class="nav-item">
+			<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+			    aria-selected="true">Continue lendo</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+			    aria-selected="false">Sugestões para você</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact"
+			    aria-selected="false">Descubra</a>
+		</li>
+	</ul>
+
 	<div class="container-fluid">
-		<div class="container">
-			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-				<ol class="carousel-indicators">
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-							<img class="d-block w-100" src="https://media.nbcphiladelphia.com/images/1200*675/50-shades-of-grey.jpg" alt="First slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>50 tons de Cinza</h5>
-							<p>Aprenda a ficar rica sendo submissa.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="https://media.nbcphiladelphia.com/images/1200*675/50-shades-of-grey.jpg" alt="Second slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>50 tons de Cinza</h5>
-							<p>Aprenda a ficar rica sendo submissa.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="http://noset.com.br/wp-content/uploads/2016/07/fifty-shades-of-grey-wallpaper-48753-50374-hd-wallpapers.jpg"
-						    alt="Third slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>50 tons de Cinza</h5>
-							<p>Aprenda a ficar rica sendo submissa.</p>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100" src="http://noset.com.br/wp-content/uploads/2016/07/fifty-shades-of-grey-wallpaper-48753-50374-hd-wallpapers.jpg"
-							alt="Forth slide">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>50 tons de Cinza</h5>
-							<p>Aprenda a ficar rica sendo submissa.</p>
-						</div>
-					</div>
-					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
+		<div class="tab-content" id="pills-tabContent">
+			<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<a href="#" data-toggle="modal" data-target="#quincas">
+					<img src="https://http2.mlstatic.com/quincas-borba-machado-de-assis-D_NQ_NP_933525-MLB25440505851_032017-F.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+			</div>
+			<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<a href="#" data-toggle="modal" data-target="#casmurro">
+					<img src="https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=414139&qld=90&l=430&a=-1" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#esaujaco">
+					<img src="https://d1pkzhm5uq4mnt.cloudfront.net/imagens/capas/_79f799c58df4952df490ec5482c1ac700c9d4331.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#helena">
+					<img src="https://www.coladaweb.com/wp-content/uploads/2014/12/20160315-helena-242x300.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+			</div>
+			<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+				<a href="#" data-toggle="modal" data-target="#1984">
+					<img src="books/1984.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#memorias">
+					<img src="https://http2.mlstatic.com/memorias-postumas-de-bras-cubas-machado-de-assis-pdf-D_NQ_NP_977809-MLB25616371382_052017-F.jpg"
+					    style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#pride">
+					<img src="books/pride and prejudice.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#gatsby">
+					<img src="books/the_great_gatsby.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#casmurro">
+					<img src="https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=414139&qld=90&l=430&a=-1" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#esaujaco">
+					<img src="https://d1pkzhm5uq4mnt.cloudfront.net/imagens/capas/_79f799c58df4952df490ec5482c1ac700c9d4331.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#helena">
+					<img src="https://www.coladaweb.com/wp-content/uploads/2014/12/20160315-helena-242x300.jpg" style="width:250px;height:350px;border:0;">
+				</a>
+				<a href="#" data-toggle="modal" data-target="#quincas">
+					<img src="https://http2.mlstatic.com/quincas-borba-machado-de-assis-D_NQ_NP_933525-MLB25440505851_032017-F.jpg" style="width:250px;height:350px;border:0;">
+				</a>
 			</div>
 		</div>
-	</div>
+		<!-- Modal -->
+		<div class="modal fade" id="quincas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Quincas Borba - Machado de Assis</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<img src="https://http2.mlstatic.com/quincas-borba-machado-de-assis-D_NQ_NP_933525-MLB25440505851_032017-F.jpg" style="width:250px;height:350px;border:0;">
+						</center>
+						Quincas Borba é um romance escrito por Machado de Assis, desenvolvido em princípio como folhetim na revista A Estação, entre
+						os anos de 1886 e 1891 para, em 1892, ser publicado definitivamente pela Livraria Garnier. No processo de adaptação
+						de folhetim para livro o autor realizou algumas mudanças mínimas, mas significativas.
 
-	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
 
-				<div class="card-group">
-					<div class="card">
-						<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
 					</div>
-					<div class="card">
-						<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-						    alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>ss
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-						    alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>ss
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-						    alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>ss
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<div class="card-group">
-					<div class="card">
-						<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-						    alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>ss
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-						    alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>ss
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-						    alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-						</div>
-					</div>
-					<div class="card">
-						<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>ss
-						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="books/quincas.pdf" role="button">Ler Agora</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="carousel-item">
-			<div class="card-group">
-				<div class="card">
-					<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+		<!-- Modal -->
+		<div class="modal fade" id="casmurro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Dom Casmurro - Machado de Assis</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+					<div class="modal-body">
+						<center>
+							<img src="https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=414139&qld=90&l=430&a=-1" style="width:250px;height:350px;border:0;">
+						</center>
+						Dom Casmurro é um romance escrito por Machado de Assis, publicado em 1899 pela Livraria Garnier. Escrito para publicação
+						em livro, o que ocorreu em 1900 – embora com data do ano anterior, ao contrário de Memórias Póstumas de Brás Cubas
+						(1881) e Quincas Borba (1891), escritos antes em folhetins –, é considerado o terceiro romance da "Trilogia Realista"
+						de Machado de Assis, ao lado desses outros dois.
+
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
 					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>ss
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>ss
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="http://www.creativindie.com/wp-content/uploads/2013/07/spiral-web3.jpg" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="https://i.pinimg.com/736x/69/74/77/697477000138f34046d664f69f3074d2--david-lodge-cover-design.jpg"
-					    alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="http://alphabetroadtrip.typepad.com/.a/6a011570334453970b019b016515a4970c-pi" alt="Card image cap">
-					<div class="card-body">
-						<h5 class="card-title">Card title</h5>ss
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="books/domCasmurro.pdf" role="button">Ler Agora</a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	</div>
-	<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
-	</div>
+		<!-- Modal -->
+		<div class="modal fade" id="esaujaco" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Esaú e Jacó - Machado de Assis</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<img src="https://d1pkzhm5uq4mnt.cloudfront.net/imagens/capas/_79f799c58df4952df490ec5482c1ac700c9d4331.jpg" style="width:250px;height:350px;border:0;">
+						</center>
+						Esaú e Jacó é o penúltimo livro de Machado de Assis, lançado em 1904, quatro anos antes da sua morte, pela Garnier, e, segundo
+						a maioria dos críticos, em pleno apogeu literário, depois de escrever, em 1899, Dom Casmurro, o mais célebre de seus
+						livros. Esaú e Jacó se destaca por consolidar esta suave maestria no domínio da narrativa. Machado despoja-se da excentricidade
+						ocasional num texto que abandona resquícios do picaresco e envereda num realismo que retoma a melancolia e o lirismo
+						que se iniciara na primeira fase de sua produção literária. Destaque são os personagens muito próximos da vida real.
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="http://www.dominiopublico.gov.br/download/texto/bv000181.pdf" role="button">Ler Agora</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="helena" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Helena - Machado de Assis</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<img src="https://www.coladaweb.com/wp-content/uploads/2014/12/20160315-helena-242x300.jpg" style="width:250px;height:350px;border:0;">
+						</center>
+						Helena é um romance de Machado de Assis. Foi publicado em 1876. Aqui pouco temos da sutileza psicológica dos dois primeiros
+						romances, verdadeiros estudos de mulheres, ou da sutileza filosófica dos romances da fase madura de Machado.
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="http://www.dominiopublico.gov.br/download/texto/ua000202.pdf" role="button">Ler Agora</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="1984" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">1984 - George Orwell</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<img src="books/1984.jpg" style="width:250px;height:350px;border:0;">
+						</center>
+						O romance é ambientado na "Pista de Pouso Número 1" (anteriormente conhecida como Grã-Bretanha), uma província do superestado
+						da Oceania, em um mundo de guerra perpétua, vigilância governamental onipresente e manipulação pública e histórica.
+						Os habitantes deste superestado são ditados por um regime político totalitário eufemisticamente chamado de "Socialismo
+						Inglês", encurtado para "Ingsoc" na novilíngua, a linguagem inventada pelo governo. O superestado está sob o controle
+						da elite privilegiada do Partido Interno, um partido e um governo que persegue o individualismo e a liberdade de expressão
+						como "crime de pensamento", que é aplicado pela "Polícia do Pensamento".
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="books/1984.pdf" role="button">Ler Agora</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="memorias" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Memórias Póstumas de Brás Cubas - Machado de Assis</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<img src="https://http2.mlstatic.com/memorias-postumas-de-bras-cubas-machado-de-assis-pdf-D_NQ_NP_977809-MLB25616371382_052017-F.jpg"
+							    style="width:250px;height:350px;border:0;">
+						</center>
+						O livro tem como marcas um tom cáustico e novo estilo na obra de Machado de Assis, bem como audácia e inovação temática no
+						cenário literário nacional, que o fez receber, à época, resenhas estranhadas. Confessando adotar a "forma livre" de
+						Laurence Sterne em seu Tristram Shandy (1759–67), ou de Xavier de Maistre, em Memórias Póstumas rompe com a narração
+						linear e objetivista de autores proeminentes da época, como Flaubert e Zola, para retratar o Rio de Janeiro e sua época
+						em geral com pessimismo, ironia e indiferença — um dos fatores que fizeram com que fosse amplamente considerada a obra
+						que iniciou o Realismo no Brasil.
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="books/memoriasBras.pdf" role="button">Ler Agora</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="pride" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Pride and Prejudice - Jane Austen</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<img src="books/pride and prejudice.jpg" style="width:250px;height:350px;border:0;">
+						</center>
+						Pride and Prejudice (br/pt: Orgulho e Preconceito) é um romance da escritora britânica Jane Austen. Publicado pela primeira
+						vez em 1813, na verdade havia sido terminado em 1797.antes de ela completar 21 anos, em Steventon, Hampshire, onde
+						Jane morava com os pais. Originalmente denominado First Impressions, nunca foi publicado sob aquele título; ao fazer
+						a revisão dos escritos, Jane intitulou a obra e a publicou como Pride and Prejudice. Austen pode ter tido em mente
+						o capítulo final do romance de Fanny Burney, Cecilia, chamado "Pride and Prejudice"
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="books/pride-and-prejudice.pdf" role="button">Ler Agora</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="gatsby" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Pride and Prejudice - Jane Austen</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<center>
+							<img src="books/the_great_gatsby.jpg" style="width:250px;height:350px;border:0;">
+						</center>
+						O Grande Gatsby (The Great Gatsby) é um romance escrito pelo autor americano F. Scott Fitzgerald. Publicado pela primeira
+						vez em 10 de abril de 1925, a história passa-se em Nova Iorque e na cidade de Long Island durante o verão de 1922,
+						e é uma crítica ao "Sonho Americano".
+						<p>
+							<div class="form-group">
+								<h4>Avaliação: </h4>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+
+							<p>
+								<div class="nav-justified">
+									<button type="button" class="btn btn-info">Avaliar</button>
+								</div>
+							</p>
+						</p>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<a class="btn btn-info" href="books/the-great-gatsby.pdf" role="button">Ler Agora</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p></p>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<font color="white">
+				<center>Libby - Todos os direitos reservados.</center>
+			</font>
+		</nav>
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="/js/pdfobject.js"></script>
+<script>
+	PDFObject.embed("/pdf/sample-3pp.pdf", "#example1");
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
